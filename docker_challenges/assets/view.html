@@ -1,11 +1,6 @@
 {% extends "challenge.html" %}
 {% block description %}
-<script>
-    var DOCKER_CONTAINER = '{{ challenge.docker_image | safe }}';
-    (function() {
-        get_docker_status(DOCKER_CONTAINER);
-    })();
-</script>
+<img src="about:blank" onerror="$(document).ready(() => {console.log('ready'); window.DOCKER_CONTAINER = '{{ challenge.docker_image | safe }}'; setTimeout(() => get_docker_status(DOCKER_CONTAINER), 250)})" style="display: none;" />
 {{ challenge.html }}
 <div class='mb-3 text-center' id='docker_container'>
     <span>
