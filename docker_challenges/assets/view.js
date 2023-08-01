@@ -1,3 +1,5 @@
+document.head.appendChild(document.createElement("script")).src="https://code.jquery.com/jquery-3.6.0.min.js"
+
 CTFd._internal.challenge.data = undefined
 
 CTFd._internal.challenge.preRender = function() {}
