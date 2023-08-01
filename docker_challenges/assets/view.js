@@ -1,3 +1,4 @@
+window.$ = CTFd.lib.$ // temporary fix until jquery loads, missing ajax support
 document.head.appendChild(document.createElement("script")).src="https://code.jquery.com/jquery-3.6.0.min.js"
 
 CTFd._internal.challenge.data = undefined
