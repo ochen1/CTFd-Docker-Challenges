@@ -83,39 +83,6 @@ function start_container(container) {
         });
 }
 
-var modal =
-    '<div class="modal fade" tabindex="-1" role="dialog">' +
-    '  <div class="modal-dialog" role="document">' +
-    '    <div class="modal-content">' +
-    '      <div class="modal-header">' +
-    '        <h5 class="modal-title">{0}</h5>' +
-    '        <button type="button" class="close" data-dismiss="modal" aria-label="Close">' +
-    '          <span aria-hidden="true">&times;</span>' +
-    "        </button>" +
-    "      </div>" +
-    '      <div class="modal-body">' +
-    "        <p>{1}</p>" +
-    "      </div>" +
-    '      <div class="modal-footer">' +
-    "      </div>" +
-    "    </div>" +
-    "  </div>" +
-    "</div>";
-
 function ezal(args) {
-    var res = modal.format(args.title, args.body);
-    var obj = $(res);
-    var button = '<button type="button" class="btn btn-primary" data-dismiss="modal">{0}</button>'.format(
-        args.button
-    );
-    obj.find(".modal-footer").append(button);
-    $("main").append(obj);
-
-    obj.modal("show");
-
-    $(obj).on("hidden.bs.modal", function(e) {
-        $(this).modal("dispose");
-    });
-
-    return obj;
+    CTFd._functions.events.eventToast({'title': args.title, 'html': args.body})
 }
