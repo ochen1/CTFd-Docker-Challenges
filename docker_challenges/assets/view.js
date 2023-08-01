@@ -1,18 +1,12 @@
 CTFd._internal.challenge.data = undefined
 
-//CTFd._internal.challenge.renderer = CTFd.lib.markdown();
-
-
 CTFd._internal.challenge.preRender = function() {}
 
 CTFd._internal.challenge.render = function(markdown) {
-    //return CTFd._internal.challenge.renderer.render(markdown)
     return markdown
 }
 
-
 CTFd._internal.challenge.postRender = function() {}
-
 
 CTFd._internal.challenge.submit = function(preview) {
     var challenge_id = parseInt(CTFd.lib.$('#challenge-id').val())
